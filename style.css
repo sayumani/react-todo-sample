@@ -1,3 +1,32 @@
 h1, p {
   font-family: Lato;
 }
+
+
+.delete{
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.collection-item{
+  display: flex;
+  justify-content: space-between
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    min-width: 50px;
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+.mark-done{
+  color:green;
+  cursor: pointer;
+  font-weight: bold;
+}

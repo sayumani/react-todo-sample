@@ -9,11 +9,13 @@ class App extends Component {
     todos: [
       {
         id: 1,
-        content: "Turn on the laptop"
+        content: "Turn on the laptop",
+        complete : false
       },
       {
         id: 2,
-        content: "Login"
+        content: "Login",
+        complete : false
       }
     ]
   };
@@ -25,8 +27,21 @@ class App extends Component {
     });
   };
 
+  markComplete = (id) =>{
+    let todos = this.state.todos;
+    todos.forEach(todo => {
+      if(todo.id === id){
+        todo.complete = !todo.complete
+      }
+    })
+    this.setState({
+      todos
+    })
+  }
+
   addTodo = (todo) => {
     todo.id = Math.random();
+    todo.complete =false;
     const todos = [...this.state.todos , todo];
     this.setState({
       todos 
@@ -40,6 +55,7 @@ class App extends Component {
         <Todos
           todos={this.state.todos}
           deleteTodo={this.deleteTodo}
+          markComplete={this.markComplete}
         />
         <AddTodo addTodo={this.addTodo}/>
       </div>
