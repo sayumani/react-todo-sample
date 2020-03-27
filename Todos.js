@@ -7,7 +7,7 @@ const Todos = ({ todos, deleteTodo ,markComplete }) => {
       return (
         <div className="collection-item" key={todo.id}>
           <span className={todo.complete === true ? "completed" : ""}>{todo.content}</span>
-          <span class="actions">
+          <span className="actions">
             <span className="delete" onClick={() => deleteTodo(todo.id)} title="Delete todo">
               X
             </span>
