@@ -25,6 +25,9 @@ h1, p {
   text-decoration: line-through;
 }
 
+.todo-done{
+  display: none
+}
 .mark-done{
   color:green;
   cursor: pointer;

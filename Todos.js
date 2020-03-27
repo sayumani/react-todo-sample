@@ -11,7 +11,7 @@ const Todos = ({ todos, deleteTodo ,markComplete }) => {
             <span className="delete" onClick={() => deleteTodo(todo.id)} title="Delete todo">
               X
             </span>
-            <span className="mark-done" hidden={todo.complete} onClick={()=> markComplete(todo.id)} title="mark completed">{checkMark}</span>
+            <span className={todo.complete===true ? "todo-done" : "mark-done"} onClick={()=> markComplete(todo.id)} title="mark completed">{checkMark}</span>
           </span>
         </div>
       );
